@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Form Examples</title>
+</head>
+
+<body>
+    <h1>Form Examples</h1>
+    <main>
+        <section>
+            <h2>Radio Example</h2>
+            <form>
+            <h3>Do you prefer cats or dogs?</h3>
+            <label for="cat">Cat</label>
+            <input type="radio" id="cat" name="animal" value="cat">
+            <label for="dog">Dog</label>
+            <input type="radio" id="dog" name="animal" value="dog">
+            <button>Submit</button>
+            </form>
+
+        </section>
+        <section>
+            <h2>Select Example</h2>
+            <form>
+                <h3>What is your favorite car</h3>
+                <label for="cars">Choose a car:</label>
+                <select name="cars" id="cars">
+                    <option value="lambo">Lambo</option>
+                    <option value="ford">Ford</option>
+                    <option value="chevy">Chevy</option>
+                    <option value="audi">Audi</option>
+                </select>
+                <button>Submit</button>
+            </form>
+        </section>
+        <section>
+            <h2>Text Type Input Example</h2>
+            <form>
+                <h3>Please enter your name</h3>
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Enter your first name">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Enter your last name">
+                <button>Submit</button>
+            </form>
+        </section>
+        <section>
+            <h2>Password Type Input Example</h2>
+            <form>
+                <h3>Please enter your password</h3>
+                <label for="pass">Enter password</label>
+                <input type="password" name="pass" id="pass">
+                <button>Submit</button>
+            </form>
+        </section>
+        <section>
+            <h2>Email Type Input Example</h2>
+            <form>
+                <h3>Please enter your email</h3>
+                <label for="gcemail">Email</label>
+                <input type="email" name="gcemail" id="gcemail" placeholder="example@email.com">
+                <button>Submit</button>
+            </form>
+        </section>
+        <section>
+            <h2>Text Area Example</h2>
+            <form>
+                <h3>What is your dream vacation?</h3>
+                <label for="vacation">Tell me about your dream vacation in less than 300 characters.</label>
+                <textarea name="vacation" id="vacation" maxlength="300" cols="30" rows="10"
+                    placeholder="My dream vacation is..."></textarea>
+            </form>
+        </section>
+        <section>
+            <h2>Input Type Date Example</h2>
+            <form>
+                <h3>When is your birthday?</h3>
+                <label for="dob">DOB</label>
+                <input type="date" id="dob" name="dob">
+                <button>Submit</button>
+            </form>
+        </section>
+        <h2>Checkbox Example</h2>
+        <form>
+            <h3>Choose your mythical creatures features:</h3>
+            <input type="checkbox" id="scales" name="scales"value="scales" checked>
+            <label for="scales">Scales</label>
+            <input type="checkbox" id="horns" name="horns" value="horns">
+            <label for="horns">Horns</label>
+            <input type="checkbox" id="tail" name="tail" value="tail">
+            <label for="tail">Tail</label>
+            <input type="checkbox" id="multipleheads" name="multipleheads">
+            <label for="multipleheads">Multiple Heads</label>
+            <input type="checkbox" id="wings" name="wings" value="wings">
+            <label for="wings">Wings</label>
+        </form>
+        </section>
+    </main>
+</body>
+
+</html>

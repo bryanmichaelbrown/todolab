@@ -1,0 +1,39 @@
+header {
+	border: 1px solid black;
+}
+
+.large {
+	font-size: 40px;
+}
+
+.no-bubble {
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+}
+
+.boxes {
+	display: flex;
+	justify-content: space-around;
+}
+
+.box {
+	width: 150px;
+	height: 150px;
+}
+
+.box1 {
+	background-color: red;
+}
+
+.box2 {
+	background-color: green;
+}
+
+.box3 {
+	background-color: blue;
+}
+
+.grey {
+	background-color: grey;
+}

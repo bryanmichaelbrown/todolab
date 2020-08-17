@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day12 Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="show">Show Form</button>
+    <div class="form-container hide">
+      <form class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter a name" />
+        <label for="phone">Phone</label>
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="Enter a phone number"
+        />
+        <label for="relation">Relation</label>
+        <input
+          type="text"
+          name="relation"
+          id="relation"
+          placeholder="Enter a relation"
+        />
+        <button>Add Contact</button>
+      </form>
+    </div>
+    <main class="contacts"></main>
+    <script src="script.js"></script>
+  </body>
+</html>
