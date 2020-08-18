@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../interfaces/todo';
+import { NgForm } from '@angular/forms';
+
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
@@ -7,12 +9,57 @@ import { Todo } from '../interfaces/todo';
 })
 export class TodoComponent implements OnInit {
   todos: Todo[] = [
-    { task: 'fold laundry', completed: false },
-    { task: 'exercise', completed: true },
-    { task: 'dishes', completed: false },
-    { task: 'walk the dog', completed: true },
+    {
+      task: 'fold laundry',
+      completed: false,
+    },
+    {
+      task: 'exercise',
+      completed: false,
+    },
+    {
+      task: 'bake cookies',
+      completed: true,
+    },
   ];
+
+  searchTerm: string;
+
+  showIndex: number;
+
   constructor() {}
 
+  addTask(form: NgForm) {
+    let newTodo: Todo = {
+      task: form.value.task,
+      completed: false,
+    };
+    this.todos.push(newTodo);
+  }
+  removeTask(index: number) {
+    this.todos.splice(index, 1);
+  }
+  completeTask(index: number) {
+    this.todos[index].completed = true;
+  }
+  setSearchTerm(form: NgForm) {
+    this.searchTerm = form.value.searchTerm.toLowerCAse().trim();
+  }
+  myFilterMethod() {
+    if (!this.searchTerm) {
+      return this.todos;
+    } else {
+      return this.todos.filter((todo) => {
+        let currentTask = todo.task.toLowerCase().trim();
+        return currentTask.includes(this.searchTerm);
+      });
+    }
+  }
+  setShowIndex(index: number) {
+    this.showIndex = index;
+  }
+  resetShowIndex() {
+    this.showIndex = undefined;
+  }
   ngOnInit(): void {}
 }
